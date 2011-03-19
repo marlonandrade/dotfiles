@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/marlonandrade/dev/peepcode/meet_rails_3/peepcode-053-rails-3-ii-2-code/finished_project/app/views/roles'
-let g:netrw_dirhist_2='/Users/marlonandrade/dev/peepcode/meet_rails_3/peepcode-053-rails-3-ii-2-code/finished_project'
