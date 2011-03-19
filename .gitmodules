@@ -1,0 +1,21 @@
+[submodule ".vim/bundle/msanders-snipmate.vim"]
+	path = .vim/bundle/msanders-snipmate.vim
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule ".vim/bundle/tpope-vim-ragtag"]
+	path = .vim/bundle/tpope-vim-ragtag
+	url = https://github.com/tpope/vim-ragtag.git
+[submodule ".vim/bundle/tpope-vim-rails"]
+	path = .vim/bundle/tpope-vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/tpope-vim-surround"]
+	path = .vim/bundle/tpope-vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/tsaleh-vim-tcomment"]
+	path = .vim/bundle/tsaleh-vim-tcomment
+	url = https://github.com/tsaleh/vim-tcomment.git
+[submodule "reinh-vim-makegreen"]
+	path = reinh-vim-makegreen
+	url = https://github.com/reinh/vim-makegreen.git
+[submodule ".vim/bundle/reinh-vim-makegreen"]
+	path = .vim/bundle/reinh-vim-makegreen
+	url = https://github.com/reinh/vim-makegreen.git
