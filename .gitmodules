@@ -19,6 +19,6 @@
 [submodule ".vim/bundle/reinh-vim-makegreen"]
 	path = .vim/bundle/reinh-vim-makegreen
 	url = https://github.com/reinh/vim-makegreen.git
-[submodule ".vim/bundle/command-t"]
-	path = .vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
+[submodule ".vim/bundle/Command-T"]
+	path = .vim/bundle/Command-T
+	url = https://github.com/akitaonrails/Command-T.git
