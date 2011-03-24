@@ -78,11 +78,10 @@ nmap <D-0> g^
 
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-
 "map to CommandT TextMate style finder
 nnoremap <silent> <C-f> :CommandT<CR>
 nnoremap <leader>t :CommandT<CR>
+nnoremap <leader>tf :CommandTFlush<CR>
 
 "key mapping for saving file
 nmap <C-s> :w<CR>
