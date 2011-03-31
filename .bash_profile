@@ -12,13 +12,13 @@ export PATH=~/bin:$PATH
 
 export EDITOR=~/bin/vim
 
-. ~/.bashrc
+#. ~/.bashrc
 
 ##
 # Your previous /Users/marlonandrade/.bash_profile file was backed up as /Users/marlonandrade/.bash_profile.macports-saved_2011-03-25_at_10:35:31
 ##
 
 # MacPorts Installer addition on 2011-03-25_at_10:35:31: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
