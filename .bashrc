@@ -27,22 +27,19 @@ tab()
 {
 	osascript -e "
 	tell application \"iTerm\"
-	 tell the first terminal
-	  set currentSession to current session
+	 tell the current terminal
 	  launch session \"Default Session\"
 	  tell the last session
 	   write text \"cd $(pwd)\"
 	  end tell
-	  select currentSession
 	 end tell
 	end tell"
 }
 
 open_command() {
-  $(tab)
   osascript -e "
     tell application \"iTerm\"
-      tell the first terminal
+      tell the current terminal
         tell the last session
           write text \"$1\"
 	  set name to \"$2\"
@@ -52,22 +49,40 @@ open_command() {
   "
 }
 open_rails() {
+  $(tab)
   open_command "rails s" "Rails"
 }
 open_spork() {
   open_command "spork" "Spork"
 }  
 open_autotest() {
+  $(tab)
   open_command "autotest" "Autotest"
 }
 open_logtail() {
+  $(tab)
   open_command "tail -f log/development.log" "Log - Development"
 }
 
-rails_dev() {
+_rails_dev() {
   open_spork
-  sleep 5
   open_rails
   open_autotest
   open_logtail
+}
+
+rails_dev() {
+  osascript -e "
+    tell application \"iTerm\"
+      activate
+      set myterm to (make new terminal)
+      tell myterm
+        launch session \"Default Session\"
+        tell the last session
+	  write text \"cd $(pwd)\"
+          write text \"_rails_dev\"
+        end tell
+      end tell
+    end tell
+  "
 }
