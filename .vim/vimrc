@@ -63,6 +63,8 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 " colorscheme topfunky-light
 colorscheme railscasts
 
+noremap <leader>t :! rspec %<CR>
+
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
 vmap <D-j> gj
@@ -81,7 +83,6 @@ nmap <D-0> g^
 
 "map to CommandT TextMate style finder
 nnoremap <silent> <C-f> :CommandT<CR>
-nnoremap <leader>t :CommandT<CR>
 nnoremap <leader>tf :CommandTFlush<CR>
 
 "key mapping for saving file
