@@ -78,8 +78,10 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
-:nnoremap <F5> :buffers<CR>:buffer<Space>
-:nnoremap <silent> :bc :Kwbd
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <silent> :bc :Kwbd
+
+nnoremap <silent> <F8> mmgg=G'm^
 
 "map to CommandT TextMate style finder
 nnoremap <silent> <C-f> :CommandT<CR>
