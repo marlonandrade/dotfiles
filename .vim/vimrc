@@ -86,6 +86,7 @@ nnoremap <silent> <F8> mmgg=G'm^
 "map to CommandT TextMate style finder
 nnoremap <silent> <C-f> :CommandT<CR>
 nnoremap <leader>tf :CommandTFlush<CR>
+nmap <F9> :CommandTFlush<CR> 
 
 "key mapping for saving file
 nmap <C-s> :w<CR>
