@@ -79,7 +79,7 @@ nmap <D-6> g^
 nmap <D-0> g^
 
 nnoremap <F5> :buffers<CR>:buffer<Space>
-nnoremap <silent> :bc :Kwbd
+nnoremap <F4> :Kwbd<CR>
 
 nnoremap <silent> <F8> mmgg=G'm^
 
