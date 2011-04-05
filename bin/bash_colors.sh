@@ -26,8 +26,7 @@ BG_NULL=00
 ##
 # ANSI Escape Commands
 ##
-START="\["
-ESC="$START\033"
+ESC="\[\033"
 END="\]"
 NORMAL="$ESC[m$END"
 RESET="$ESC[${DULL};${FG_WHITE};${BG_NULL}m$END"
