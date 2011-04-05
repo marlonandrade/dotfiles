@@ -1,0 +1,15 @@
+[user]
+  name = Marlon Andrade
+  email = marlonmandrade@gmail.com
+[diff]
+[color]
+  ui = auto
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  di = diff
+  dc = diff -- cached
+  ammend = commit --amend
+  aa = add --al
+  head = log -1

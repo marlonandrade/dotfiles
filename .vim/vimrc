@@ -154,7 +154,6 @@ function! Tab_or_complete()
   endif
 endfunction
 
-:inoremap <Tab> <C-R>=Tab_or_complete()<CR>
-:set dictionary="/usr/dict/words"
+inoremap <Tab> <C-R>=Tab_or_complete()<CR>
 
-nnoremap <esc> :noh<cr><esc>
+nnoremap <silent> ,/ :noh<cr>
