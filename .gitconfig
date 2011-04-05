@@ -13,3 +13,5 @@
   ammend = commit --amend
   aa = add --al
   head = log -1
+  pom = push origin master
+  phm = push heroku master
