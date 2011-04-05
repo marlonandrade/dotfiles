@@ -156,3 +156,5 @@ endfunction
 
 :inoremap <Tab> <C-R>=Tab_or_complete()<CR>
 :set dictionary="/usr/dict/words"
+
+nnoremap <esc> :noh<cr><esc>
