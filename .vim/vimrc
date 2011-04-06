@@ -63,8 +63,6 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 " colorscheme topfunky-light
 colorscheme railscasts
 
-noremap <leader>t :! rspec %<CR>
-
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
 vmap <D-j> gj
@@ -90,10 +88,6 @@ nmap <F9> :CommandTFlush<CR>
 
 "key mapping for saving file
 nmap <C-s> :w<CR>
-
-"key mapping for tab navigation
-nmap <Tab> gt
-nmap <S-Tab> gT
 
 "Key mapping for textmate-like indentation
 nmap <D-[> <<
@@ -137,23 +131,19 @@ let g:user_zen_settings = {
       \  },
       \}
 
-
-"Use TAB to complete when typing words, else inserts TABs as usual.
-"Uses dictionary and source files to find matching words to complete.
-"
-""See help completion for source,
-"Note: usual completion is on <C-n> but more trouble to press all the time.
-""Never type the same word twice and maybe learn a new spellings!
-"Use the Linux dictionary when spelling is in doubt.
-""Window users can copy the file to their machine.
-function! Tab_or_complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+function! CleverTab()
+  if pumvisible()
     return "\<C-N>"
-  else
+  endif
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
     return "\<Tab>"
+  elseif exists('&omnifunc') && &omnifunc != ''
+    return "\<C-X>\<C-O>"
+  else
+    return "\<C-N>"
   endif
 endfunction
 
-inoremap <Tab> <C-R>=Tab_or_complete()<CR>
-
+inoremap <Tab> <C-R>=CleverTab()<CR>
 nnoremap <silent> ,/ :noh<cr>
+

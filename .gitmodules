@@ -13,12 +13,6 @@
 [submodule ".vim/bundle/tsaleh-vim-tcomment"]
 	path = .vim/bundle/tsaleh-vim-tcomment
 	url = https://github.com/tsaleh/vim-tcomment.git
-[submodule "reinh-vim-makegreen"]
-	path = reinh-vim-makegreen
-	url = https://github.com/reinh/vim-makegreen.git
-[submodule ".vim/bundle/reinh-vim-makegreen"]
-	path = .vim/bundle/reinh-vim-makegreen
-	url = https://github.com/reinh/vim-makegreen.git
 [submodule ".vim/bundle/Command-T"]
 	path = .vim/bundle/Command-T
 	url = https://github.com/akitaonrails/Command-T.git
