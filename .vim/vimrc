@@ -134,13 +134,19 @@ function! CleverTab()
   endif
   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
     return "\<Tab>"
-  elseif exists('&omnifunc') && &omnifunc != ''
-    return "\<C-X>\<C-O>"
   else
     return "\<C-N>"
   endif
 endfunction
 
+function! OmniComplete()
+  if exists('&omnifunc') && &omnifunc != ''
+    return "\<C-X>\<C-O>"
+  endif
+endfunction
+
 inoremap <Nul> <C-R>=CleverTab()<CR>
+inoremap <C-A> <C-R>=OmniComplete()<CR>
+
 nnoremap <silent> ,/ :noh<cr>
 
