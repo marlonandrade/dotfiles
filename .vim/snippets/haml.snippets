@@ -1,0 +1,19 @@
+snippet box Content box
+	.block
+	  .block_head
+	    .bheadl
+	    .bheadr
+	    %h2 ${1:title}
+	    ${2:boxlink}
+	  .block_content
+	    ${3:content 
+	  .bendl
+	  .bendr
+
+snippet boxlink Content action links
+	%ul
+	  %li.nobg
+	    ${1:link}
+
+snippet linkto Link to
+	= link_to ${1:name}, ${2:path}
