@@ -1,0 +1,24 @@
+snippet box Content box
+	<div class="block">
+	  <div class="block_head">
+	    <div class="bheadl"></div>
+	    <div class="bheadr"></div>
+	    <h2>${1:title}</h2>
+	    ${2:boxlink}
+	  </div>
+	  <div class="block_content">
+	    ${3:content}
+	  </div>
+	  <div class="bendl"></div>
+	  <div class="bendr"></div>
+	</div>
+
+snippet boxlink Content action links
+	<ul>
+	  <li class="nobg">
+	    ${1:link}
+	  </li>
+	</ul>
+
+snippet linkto Link to
+	<%= link_to ${1:name}, ${2:path} %>
