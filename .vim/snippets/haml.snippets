@@ -12,7 +12,7 @@ snippet box Content box
 
 snippet boxlink Content action links
 	%ul
-	  %li.nobg ${1:linkto}
+	  %li.nobg= ${1:linkto}
 
 snippet linkto Link to
-	= link_to ${1:name}, ${2:path}
+	link_to ${1:name}, ${2:path}
