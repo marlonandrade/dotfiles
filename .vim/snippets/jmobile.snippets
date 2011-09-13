@@ -1,0 +1,126 @@
+snippet doc Document
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <title>${1:title}</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <link rel="stylesheet" href="${2:css_folder}jquery.mobile-1.0b3.css" />
+	    <script type="text/javascript" src="${3:js_folder}jquery-1.6.3.min.js"></script>
+	    <script type="text/javascript" src="${4:js_mobile_folder}jquery.mobile-1.0b3.js"></script>
+	  </head>
+	  <body>
+	    ${5:content}
+	  </body>
+	</html>
+snippet page Page
+	<div data-role="page" id="${1:page_id}"${2: data-title="page_title"}>
+	  <div data-role="header" data-position="fixed">
+	    <h1>${3:header}</h1>
+	  </div>
+	  <div data-role="content">
+	    ${4:content}
+	  </div>
+	  <div data-role="footer" data-position="fixed">
+	    <h4>${5:footer}</h4>
+	  </div>
+	</div>
+snippet a Link
+	<a href="${1:link_to}">${2:content}</a>
+snippet button Button Link
+	<a data-role="button" href="${1:linkto}">${2:content}</a>
+snippet tbutton Button Link with Transition
+	<a data-role="button" href="${1:linkto}" data-transition="${2:transition}">${3:content}</a>
+snippet ibutton Button Link with Icon
+	<a data-role="button" href="${1:linkto}" data-icon="${2:icon}">${3:content}</a>
+snippet inbutton Button Link with Icon and No Text
+	<a data-role="button" href="${1:linkto}" data-icon="${2:icon}" data-iconpos="notext">${3:content}</a>
+snippet irbutton Button Link with Right Aligned Icon
+	<a data-role="button" href="${1:linkto}" data-icon="${2:icon}" data-iconpos="right">${3:content}</a>
+snippet itbutton Button Link with Top Aligned Icon
+	<a data-role="button" href="${1:linkto}" data-icon="${2:icon}" data-iconpos="top">${3:content}</a>
+snippet ibbutton Button Link with Bottom Aligned Icon
+	<a data-role="button" href="${1:linkto}" data-icon="${2:icon}" data-iconpos="bottom">${3:content}</a>
+snippet revbutton Reverse Button Link
+	<a data-role="button" data-direction="reverse" href="${1:linkto}">${2:content}</a>
+snippet closebutton Close Button Link
+	<a data-role="button" data-rel="back" href="${1:linkto}">${2:content}</a>
+snippet backbutton Back Button Link
+	<a data-role="button" data-rel="back" data-icon="back" href="${1:linkto}">${2:content}</a>
+snippet backpopbutton Popup Button Link
+	<a data-role="button" data-rel="dialog" data-transition="pop" href="${1:linkto}">${2:content}</a>
+snippet dialog Dialog
+	<a data-rel="dialog" href="${1:linkto}">${2:content}</a>
+snippet navbar Navigation Bar
+	<div data-role="navbar">
+	  <ul>
+	    ${1:navitem}
+	  </ul>
+	</div>
+snippet navitem Navigation Item
+	<li>${1:content}</li>
+snippet field Field Contain
+	<div data-role="fieldcontain">
+	  ${1:content}
+	</div>
+snippet ffield Fieldset Field Contain
+	<fieldset data-role="fieldcontain">
+	  ${1:content}
+	</fieldset>
+snippet tinput Text Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="text" id="${3:id}" name="${4:name}" />
+snippet tarea Text Area
+	<label for="${1:name}">${2:text}</label>
+	<textarea id="${3:id}" name="${4:name}"></textarea>
+snippet sinput Search Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="text" data-type="search" id="${3:id}" name="${4:name}" />
+snippet pinput Password Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="password" id="${3:id}" name="${4:name}" />
+snippet einput Email Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="email" id="${3:id}" name="${4:name}" />
+snippet ninput Number Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="number" id="${3:id}" name="${4:name}" />
+snippet telinput Tel Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="tel" id="${3:id}" name="${4:name}" />
+snippet urlinput Url Input
+	<label for="${1:name}">${2:text}</label>
+	<input type="url" id="${3:id}" name="${4:name}" />
+snippet slider Slider
+	<label for="${1:name}">${2:text}</label>
+	<input type="range" id="${3:id}" name="${4:name}" min="${5:min}" max="${6:max}" value="${7:initial}" />
+snippet flip Flip Toggle
+	<label for="${1:name}">${2:text}</label>
+	<select id="${3:id}" name="${4:name}" data-role="slider">
+	  <option value="${5:off}">${6:off_label}</option>
+	  <option value="${7:on}">${8:on_label}</option>
+	</select>
+snippet group Control Group (default = Vertical)
+	<fieldset data-role="controlgroup"${1: data-type="horizontal"}>
+	  <legend>${2:legend}</legend>
+	  ${3:option}
+	</fieldset>
+snippet roption Radio Option
+	<input type="radio" id="${1:id}" name="${2:name}" value="${3:value}"${4: checked="checked"} />
+	<label for="${5:name}">${6:text}</label>
+snippet coption Checkbox Option
+	<input type="checkbox" id="${1:id}" name="${2:name}"${3: checked="checked"} />
+	<label for="${4:name}">${5:text}</label>
+snippet soption Select Option
+	<option value="${1:value}">${2:text}</option>
+snippet dsoption Disabled Select Option
+	<option value="${1:value}" disabled>${2:text}</option>
+snippet smenu Select Menu
+	<label for="${1:name}">${2:text}</label>
+	<select id="${3:id}" name="${4:name}"${5: multiple="multiple"}${6: data-native-menu="false"} >
+	  ${7:soption}
+	</select>
+snippet optgroup Optgroup for Select
+	<optgroup label="${1:label}">
+	  ${2:soption}
+	</optgroup>
