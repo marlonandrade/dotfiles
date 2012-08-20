@@ -2,4 +2,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-nmap :q :xccmd<Space>closeDocument<CR>
+nmap :q :xccmd<Space>closeDocument
+nmap :wq :w<cr>:xccmd<Space>closeDocument
+nmap :r :run
+nmap :b :make
