@@ -6,3 +6,4 @@ nmap :q :xccmd<Space>closeDocument
 nmap :wq :w<cr>:xccmd<Space>closeDocument
 nmap :r :run
 nmap :b :make
+nmap :test :w<cr>:xccmd<Space>testActiveRunContext
