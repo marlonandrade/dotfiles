@@ -145,6 +145,7 @@ function! OmniComplete()
   endif
 endfunction
 
+inoremap jk <Esc>
 inoremap <Nul> <C-R>=CleverTab()<CR>
 inoremap <C-A> <C-R>=OmniComplete()<CR>
 
