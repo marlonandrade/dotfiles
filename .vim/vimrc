@@ -151,3 +151,4 @@ inoremap <C-A> <C-R>=OmniComplete()<CR>
 
 nnoremap <silent> ,/ :noh<cr>
 
+let g:LatexBox_latexmk_options = "-pvc -pdfps"
