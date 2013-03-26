@@ -31,13 +31,12 @@ grb_git_prompt() {
   fi
 }
 
-rvm_version() {
-  local RVM=`~/.rvm/bin/rvm-prompt i v g`
-  echo ${RVM//ruby-/}
+ruby_version() {
+  echo `rbenv version-name`
 }
 
 set_prompt() {
-  export PS1="${BRIGHT_BLUE}\w${BRIGHT_CYAN}$(grb_git_prompt) ${BRIGHT_YELLOW}\$(rvm_version) ${YELLOW}\$ ${NORMAL}"
+  export PS1="${BRIGHT_BLUE}\w${BRIGHT_CYAN}$(grb_git_prompt) ${BRIGHT_YELLOW}\$(ruby_version) ${YELLOW}\$ ${NORMAL}"
 }
 
 PROMPT_COMMAND=set_prompt
