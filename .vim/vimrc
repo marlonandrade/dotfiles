@@ -55,10 +55,6 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
-set laststatus=2                  " Show the status line all the time
-" Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
-
 " Or use vividchalk
 " colorscheme topfunky-light
 colorscheme railscasts
@@ -152,3 +148,6 @@ inoremap <C-A> <C-R>=OmniComplete()<CR>
 nnoremap <silent> ,/ :noh<cr>
 
 let g:LatexBox_latexmk_options = "-pvc -pdfps"
+
+let g:airline_enable_fugitive=1
+
