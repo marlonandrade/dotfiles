@@ -55,6 +55,8 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
+set laststatus=2
+
 " Or use vividchalk
 " colorscheme topfunky-light
 colorscheme railscasts
