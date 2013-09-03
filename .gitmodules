@@ -37,6 +37,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "xcode/snippets"]
-	path = xcode/snippets
+[submodule "xcode/submodules/Xcode-Snippets"]
+	path = xcode/submodules/Xcode-Snippets
 	url = git@github.com:mattt/Xcode-Snippets.git
