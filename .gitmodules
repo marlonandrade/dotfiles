@@ -37,3 +37,6 @@
 [submodule "xcode/submodules/Xcode-Snippets"]
 	path = xcode/submodules/Xcode-Snippets
 	url = git@github.com:mattt/Xcode-Snippets.git
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git
