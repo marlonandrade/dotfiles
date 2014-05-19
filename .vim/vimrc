@@ -148,3 +148,4 @@ let g:airline_enable_fugitive=1
 let g:airline_powerline_fonts=1
 
 let g:ctrlp_map = '<c-f>'
+let g:ctrlp_root_markers = ['.ctrlp']

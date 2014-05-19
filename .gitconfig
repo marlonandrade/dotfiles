@@ -15,3 +15,5 @@
   head = log -1
   pom = push origin master
   phm = push heroku master
+[core]
+  excludesfile = /Users/marlonandrade/.gitignore_global
