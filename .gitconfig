@@ -13,5 +13,8 @@
   ammend = commit --amend
   aa = add --al
   head = log -1
+  pod = push origin develop
   pom = push origin master
   phm = push heroku master
+[core]
+  excludesfile = /Users/marlonandrade/.gitignore_global
