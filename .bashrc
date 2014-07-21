@@ -11,6 +11,7 @@ alias vim='mvim -v'
 alias vi='mvim -v'
 alias rails_tags='ctags -R --exclude=.git --exclude=log . $(bundle list --paths)'
 alias gx='gitx'
+alias h='history'
 
 minutes_since_last_commit() {
   now=`date +%s`
