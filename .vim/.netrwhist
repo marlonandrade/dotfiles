@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/marlonandrade/dev/ruby/rails/trabalho_si'
 let g:netrw_dirhist_2='/Users/marlonandrade/dev/ruby/rails/testes/taskdo'
 let g:netrw_dirhist_3='/Users/marlonandrade/dev/traf/abriutec/app/views/prestadores'
 let g:netrw_dirhist_4='/Users/marlonandrade/dev/traf/abriutec'
+let g:netrw_dirhist_5='/Users/marlonandrade/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.4'
+let g:netrw_dirhist_6='/Users/marlonandrade/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/activesupport-4.1.4/lib'
