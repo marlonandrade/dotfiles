@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/emeet-vim"]
 	path = .vim/bundle/emeet-vim
 	url = git@github.com:mattn/emmet-vim.git
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
