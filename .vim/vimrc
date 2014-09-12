@@ -145,6 +145,9 @@ inoremap <C-A> <C-R>=OmniComplete()<CR>
 
 nnoremap <silent> ,/ :noh<cr>
 
+" html indentation
+let g:html_indent_inctags = "html,body,head,tbody"
+
 let g:airline_enable_fugitive=1
 let g:airline_powerline_fonts=1
 
