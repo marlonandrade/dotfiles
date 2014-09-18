@@ -91,17 +91,6 @@ vmap <D-]> >gv
 
 let mapleader = ','
 
-" NERDTree setup
-" Toggle NERDTree mappings
-map <C-n> :NERDTreeToggle<CR>
-
-" Open NERDTree if vim starts up with no files
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Close vim if only window open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
 " Uncomment to use Jamis Buck's file opening plugin
