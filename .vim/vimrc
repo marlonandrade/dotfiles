@@ -62,27 +62,6 @@ set sidescroll=1
 
 set laststatus=2
 
-"mapping for command key to map navigation thru display lines instead
-"of just numbered lines
-vmap <D-j> gj
-vmap <D-k> gk
-vmap <D-4> g$
-vmap <D-6> g^
-vmap <D-0> g^
-nmap <D-j> gj
-nmap <D-k> gk
-nmap <D-4> g$
-nmap <D-6> g^
-nmap <D-0> g^
-
-nnoremap <F5> :buffers<CR>:buffer<Space>
-nnoremap <F4> :Kwbd<CR>
-
-nnoremap <silent> <F8> mmgg=G'm^
-
-"key mapping for saving file
-nmap <C-s> :w<CR>
-
 "Key mapping for textmate-like indentation
 nmap <D-[> <<
 nmap <D-]> >>
@@ -91,21 +70,16 @@ vmap <D-]> >gv
 
 let mapleader = ','
 
-let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
+inoremap jk <Esc>
 
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
+nnoremap <silent><leader>/ :noh<cr>
+nnoremap <silent><leader>r :redraw!<CR>
 
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
+"close single buffer without closing split window
+nnoremap <F4> :Kwbd<CR>
 
-"vnoremap ; :
-"vnoremap : ;
-
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+"reindent file
+nnoremap <silent> <F8> mmgg=G'm^
 
 "Enabling Zencoding
 let g:user_zen_settings = {
@@ -124,29 +98,6 @@ let g:user_zen_settings = {
       \  },
       \}
 
-function! CleverTab()
-  if pumvisible()
-    return "\<C-N>"
-  endif
-  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-    return "\<Tab>"
-  else
-    return "\<C-N>"
-  endif
-endfunction
-
-function! OmniComplete()
-  if exists('&omnifunc') && &omnifunc != ''
-    return "\<C-X>\<C-O>"
-  endif
-endfunction
-
-inoremap jk <Esc>
-inoremap <Nul> <C-R>=CleverTab()<CR>
-inoremap <C-A> <C-R>=OmniComplete()<CR>
-
-nnoremap <silent> ,/ :noh<cr>
-
 " html indentation
 let g:html_indent_inctags = "html,body,head,tbody"
 
@@ -159,3 +110,7 @@ let g:ctrlp_root_markers = ['.ctrlp']
 let g:mustache_abbreviations = 1
 
 set exrc
+
+" NERDTree setup
+" Toggle NERDTree mappings
+map <C-n> :NERDTreeToggle<CR>
