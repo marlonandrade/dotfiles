@@ -41,5 +41,5 @@
   path = .vim/bundle/tpope-vim-ragtag
   url = git@github.com:tpope/vim-ragtag.git
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = git@github.com:scroolloose/nerdtree.git
+  path = .vim/bundle/nerdtree
+  url = git@github.com:scrooloose/nerdtree.git
