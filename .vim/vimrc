@@ -114,3 +114,16 @@ set exrc
 " NERDTree setup
 " Toggle NERDTree mappings
 map <C-n> :NERDTreeToggle<CR>
+
+function! CleverTab()
+  if pumvisible()
+    return "\<C-N>"
+  endif
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+    return "\<Tab>"
+  else
+    return "\<C-N>"
+  endif
+endfunction
+
+inoremap <Nul> <C-R>=CleverTab()<CR>
