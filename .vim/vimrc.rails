@@ -1,1 +1,1 @@
-let g:ctrlp_custom_ignore = '\v[\/](vendor\/bundle)'
+let g:ctrlp_custom_ignore = '\v[\/](doc|vendor\/bundle)'
