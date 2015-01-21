@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/kwbd"]
   path = .vim/bundle/kwbd
   url = https://github.com/rgarver/Kwbd.vim.git
-[submodule ".vim/bundle/tpope-vim-haml"]
-  path = .vim/bundle/tpope-vim-haml
-  url = https://github.com/tpope/vim-haml.git
 [submodule ".vim/bundle/vim-coffee-script"]
   path = .vim/bundle/vim-coffee-script
   url = https://github.com/kchmck/vim-coffee-script.git
@@ -28,9 +25,6 @@
 [submodule ".vim/bundle/vim-mustache-handlebars"]
   path = .vim/bundle/vim-mustache-handlebars
   url = git@github.com:mustache/vim-mustache-handlebars.git
-[submodule ".vim/bundle/emeet-vim"]
-  path = .vim/bundle/emeet-vim
-  url = git@github.com:mattn/emmet-vim.git
 [submodule ".vim/bundle/vim-javascript"]
   path = .vim/bundle/vim-javascript
   url = git@github.com:pangloss/vim-javascript.git
