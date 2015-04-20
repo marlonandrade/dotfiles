@@ -18,3 +18,7 @@
   phm = push heroku master
 [core]
   excludesfile = /Users/marlonandrade/.gitignore_global
+[branch "master"]
+	rebase = true
+[branch]
+	autosetuprebase = always
