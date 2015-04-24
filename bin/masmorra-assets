@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+DESTINATION = '/Users/marlonandrade/dev/cocos2d/tcc/MasmorraDados/Resources'
+
+# Takes all the files in the current directory and expects
+# the following format:
+#   dice-action-sword-hd.png
+#
+# And copies to:
+#   DESTINATION/hd/images/dice/action/sword.png
+Dir.glob('**/*.*').each do |file|
+  match = file.match(/-([hmsu]d)(\..*)/)
+  file_without_res = file.sub match[0], match[2]
+
+  file_parts = file_without_res.split '-'
+
+  path = [
+    DESTINATION,
+    match[1],
+    'images',
+    file_parts[0..-2]
+  ].flatten.join '/'
+  FileUtils.mkdir_p path
+
+  path << "/#{file_parts.last}"
+  FileUtils.cp file, path
+end
