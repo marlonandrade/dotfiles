@@ -9,7 +9,7 @@ DESTINATION = '/Users/marlonandrade/dev/cocos2d/tcc/MasmorraDados/Resources'
 #   dice-action-sword-hd.png
 #
 # And copies to:
-#   DESTINATION/hd/images/dice/action/sword.png
+#   DESTINATION/hd/dice/action/sword.png
 Dir.glob('**/*.*').each do |file|
   match = file.match(/-([hmsu]d)(\..*)/)
   file_without_res = file.sub match[0], match[2]
@@ -19,7 +19,6 @@ Dir.glob('**/*.*').each do |file|
   path = [
     DESTINATION,
     match[1],
-    'images',
     file_parts[0..-2]
   ].flatten.join '/'
   FileUtils.mkdir_p path
