@@ -16,9 +16,14 @@
   pod = push origin develop
   pom = push origin master
   phm = push heroku master
+  lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
   excludesfile = /Users/marlonandrade/.gitignore_global
-[branch "master"]
-	rebase = true
+[merge]
+  ff = false
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
+[branch "master"]
+  rebase = true
+[branch "develop"]
+  rebase = true

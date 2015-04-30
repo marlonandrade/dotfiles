@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-jsx"]
 	path = .vim/bundle/vim-jsx
 	url = git@github.com:mxw/vim-jsx.git
+[submodule ".vim/bundle/valloric-you-complete-me"]
+	path = .vim/bundle/valloric-you-complete-me
+	url = git@github.com:Valloric/YouCompleteMe.git

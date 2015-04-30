@@ -129,3 +129,5 @@ endfunction
 inoremap <Nul> <C-R>=CleverTab()<CR>
 
 let g:syntastic_scss_checkers = ['scss_lint']
+
+autocmd FileType javascript call RagtagInit()
