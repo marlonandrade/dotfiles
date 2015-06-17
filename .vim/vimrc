@@ -45,7 +45,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set dir=$HOME/tmp                 " Keep swap files in one location
 
 "indent settings
 set shiftwidth=2
@@ -128,6 +128,13 @@ endfunction
 
 inoremap <Nul> <C-R>=CleverTab()<CR>
 
-let g:syntastic_scss_checkers = ['scss_lint']
-
 autocmd FileType javascript call RagtagInit()
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
