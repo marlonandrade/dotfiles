@@ -128,4 +128,7 @@ endfunction
 
 inoremap <Nul> <C-R>=CleverTab()<CR>
 
+" Remove trailing whitespaces for all files
+autocmd BufWritePre * :%s/\s\+$//e
+
 autocmd FileType javascript call RagtagInit()
