@@ -1,1 +1,1 @@
-let g:ctrlp_custom_ignore = '\v[\/](bower_components|dist|node_modules|tmp)'
+let g:ctrlp_custom_ignore = '\v[\/](build|bower_components|dist|node_modules|tmp)'
