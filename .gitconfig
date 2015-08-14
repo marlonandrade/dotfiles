@@ -9,7 +9,7 @@
   ci = commit
   co = checkout
   di = diff
-  dc = diff -- cached
+  dc = diff --cached
   ammend = commit --amend
   aa = add --al
   head = log -1
@@ -19,11 +19,3 @@
   lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
   excludesfile = /Users/marlonandrade/.gitignore_global
-[merge]
-  ff = false
-[branch]
-  autosetuprebase = always
-[branch "master"]
-  rebase = true
-[branch "develop"]
-  rebase = true
