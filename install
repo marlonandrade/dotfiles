@@ -1,0 +1,48 @@
+# Updating all submodules
+echo "-- Updating all git submodules ..."
+git submodule update --init --recursive
+
+# Files/dirs to be symlinked
+declare -a files=(
+  "bin"
+  ".bash_profile"
+  ".bashrc"
+  ".gemrc"
+  ".gitconfig"
+  ".gitignore_global"
+  ".vim"
+  ".xvimrc"
+)
+
+# Link files/dirs to home folder
+echo "-- Linking files/dir to home folder..."
+for file in ${files[@]}
+do
+  ln -s $PWD/$file $HOME/$file
+done
+
+# Like gvimrc and vimrc to home folder
+echo "-- linking gvimrc and vimrc to home folder ..."
+ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
+ln -s $HOME/.vim/vimrc  $HOME/.vimrc
+
+# Create tmp folder where my vim is configured to save .swp temp files
+echo "-- creating $HOME/tmp folder ..."
+mkdir $HOME/tmp
+
+# Install rbenv and rubybuild
+echo "-- installing rbenv and rubybuild ..."
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# Install homebrew
+echo "-- installing homebrew ..."
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install cmake
+echo "-- installing cmake ..."
+brew install cmake
+
+# Install youcompleteme vim plugin
+echo "-- installing youcompleteme vim plugin ..."
+./.vim/bundle/valloric-you-complete-me/install.sh
