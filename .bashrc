@@ -7,11 +7,42 @@ export GREP_OPTIONS="--color"
 export PATH=~/bin:$PATH
 export EDITOR=~/bin/vim
 
+export RUBYOPT='-W0'
+
 alias vim='mvim -v'
 alias vi='mvim -v'
 alias rails_tags='ctags -R --exclude=.git --exclude=log . $(bundle list --paths)'
 alias gx='gitx'
 alias h='history'
+
+# Configure and unconfigure proxy variables as required by apps
+function proxy () {
+    PROXYADDR="http://webproxy.corp.booking.com:3128"
+    OPTION="$1"
+    if [ "$OPTION" == "0" ] || [ "$OPTION" == "off" ] || [ "$OPTION" == "no" ]; then
+        unset http_proxy
+        unset https_proxy
+        unset HTTP_PROXY
+        unset HTTPS_PROXY
+        unset no_proxy
+
+        printf "Proxy off\n"
+    elif [ "$OPTION" == "1" ] || [ "$OPTION" == "on" ] || [ "$OPTION" == "yes" ]; then
+        export http_proxy="$PROXYADDR"
+        export https_proxy="$PROXYADDR"
+        export HTTP_PROXY="$PROXYADDR"
+        export HTTPS_PROXY="$PROXYADDR"
+        export no_proxy="localhost,127.0.0.1,booking.com"
+
+        printf "Proxy configured to $PROXYADDR\n"
+    else
+        printf "http_proxy=$http_proxy\n"
+        printf "https_proxy=$https_proxy\n"
+        printf "HTTP_PROXY=$HTTP_PROXY\n"
+        printf "HTTPS_PROXY=$HTTPS_PROXY\n"
+        printf "Please use 0/1, on/off, yes,no\n"
+    fi
+}
 
 minutes_since_last_commit() {
   now=`date +%s`
@@ -80,7 +111,7 @@ open_rails() {
 }
 open_spork() {
   open_command "spork" "Spork"
-}  
+}
 open_autotest() {
   $(tab)
   open_command "autotest" "Autotest"
@@ -112,3 +143,7 @@ rails_dev() {
   end tell
   "
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

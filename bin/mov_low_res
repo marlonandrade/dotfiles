@@ -1,0 +1,1 @@
+ffmpeg -i $1 -c:v libx264 -b:v 1.5M -c:a aac -b:a 128k $1-low-res.mov

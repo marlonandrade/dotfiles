@@ -9,7 +9,7 @@ Helptags
 syntax enable                     " Turn on syntax highlighting.
 
 set background=dark
-colorscheme solarized
+colorscheme molokai
 
 filetype plugin indent on         " Turn on file type detection.
 
